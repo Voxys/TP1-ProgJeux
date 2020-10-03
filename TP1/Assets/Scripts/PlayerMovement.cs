@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D playerBody;
     SpriteRenderer sprite;
     float speed;
-    bool m_FacingRight;
-    bool m_FacingLeft;
 
     void Start()
     {
@@ -26,13 +24,16 @@ public class PlayerMovement : MonoBehaviour
         {
             sprite.flipX = true;
         }
-        else
+        else if (movX > 0)
         {
             sprite.flipX = false;
         }
 
         playerBody.velocity = new Vector3(movX * Time.deltaTime, playerBody.velocity.y, 0f);
-    }
 
- 
+        if (Input.GetButtonDown("Jump") && playerBody.velocity.y == 0)
+        {
+            playerBody.AddForce(Vector3.up * 300f);
+        }
+    }
 }
