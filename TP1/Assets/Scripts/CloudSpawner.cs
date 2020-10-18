@@ -8,7 +8,7 @@ public class CloudSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Spawn", 0, 20f);
+        InvokeRepeating("Spawn", 0, 23f);
     }
 
     void Spawn()

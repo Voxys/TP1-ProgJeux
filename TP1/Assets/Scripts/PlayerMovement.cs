@@ -6,7 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D playerBody;
     SpriteRenderer sprite;
-    float speed;
+    [SerializeField]
+    public float speed;
+
+    bool jump;
+
+    public Animator animator;
 
     void Start()
     {
@@ -17,8 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float movX = Input.GetAxis("Horizontal") * speed;
-        float movY = Input.GetAxis("Vertical") * speed;
+        //float movY = Input.GetAxis("Vertical") * speed;
+        float movX = Input.GetAxisRaw("Horizontal") * speed;
+
+        animator.SetFloat("Speed", Mathf.Abs(movX));
 
         if (movX < 0)
         {
@@ -31,9 +38,21 @@ public class PlayerMovement : MonoBehaviour
 
         playerBody.velocity = new Vector3(movX * Time.deltaTime, playerBody.velocity.y, 0f);
 
-        if (Input.GetButtonDown("Jump") && playerBody.velocity.y == 0)
+        if (Input.GetButtonDown("Jump"))
         {
-            playerBody.AddForce(Vector3.up * 300f);
+            jump = true;
         }
     }
+
+    private void FixedUpdate()
+    {     
+        if (jump)
+        {
+            jump = false;
+            playerBody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+            animator.SetTrigger("Jump");
+        }
+    }
+
+
 }
