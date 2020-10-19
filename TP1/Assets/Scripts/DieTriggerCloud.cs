@@ -8,8 +8,7 @@ public class DieTriggerCloud : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Clouds"))
         {
-            Destroy(collision.gameObject);
-            Debug.Log("HIT");
+            Destroy(collision.gameObject);          
         }
     }
 }

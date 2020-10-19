@@ -11,7 +11,7 @@ public class MoveShipInSpace : MonoBehaviour
     void Start()
     {
         shipBody = GetComponent<Rigidbody2D>();
-        speed = 100f;
+        speed = 100f;      
     }
 
     // Update is called once per frame
