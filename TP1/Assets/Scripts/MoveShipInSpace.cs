@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveShipInSpace : MonoBehaviour
 {
@@ -21,20 +22,26 @@ public class MoveShipInSpace : MonoBehaviour
 
         if (movX < 0 )
         {
-            shipBody.MoveRotation(shipBody.rotation-5);
-            Debug.Log("-");
+            shipBody.MoveRotation(shipBody.rotation+5);
         }
 
         else if(movX > 0)
         {
-            shipBody.MoveRotation(shipBody.rotation+5);
-            Debug.Log("+");
+            shipBody.MoveRotation(shipBody.rotation-5);
         }
 
         if (Input.GetButtonDown("Jump"))
         {
             shipBody.AddForce(transform.forward * 10);
-            Debug.Log(shipBody.velocity.x);
+        }
+    }
+
+    //Transition vers planéte Orange
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Planet Orange")
+        {
+            SceneManager.LoadScene("Planet Orange");
         }
     }
 }
