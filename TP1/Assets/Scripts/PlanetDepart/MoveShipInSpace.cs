@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 public class MoveShipInSpace : MonoBehaviour
 {
     Rigidbody2D shipBody;
-    float speed;
 
 
     void Start()
     {
         shipBody = GetComponent<Rigidbody2D>();
-        speed = 100f;      
     }
 
     // Update is called once per frame
@@ -22,12 +20,12 @@ public class MoveShipInSpace : MonoBehaviour
 
         if (movX < 0 )
         {
-            shipBody.MoveRotation(shipBody.rotation+5);
+            shipBody.MoveRotation(shipBody.rotation+2);
         }
 
         else if(movX > 0)
         {
-            shipBody.MoveRotation(shipBody.rotation-5);
+            shipBody.MoveRotation(shipBody.rotation-2);
         }
 
         if (Input.GetButtonDown("Jump"))
