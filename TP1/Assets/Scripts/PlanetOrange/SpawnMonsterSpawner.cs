@@ -6,10 +6,11 @@ public class SpawnMonsterSpawner : MonoBehaviour
 {
     public GameObject spawner;
     public float intervalle;
+    public int departTime;
 
     private void Start()
     {
-        InvokeRepeating("Spawn", 0, intervalle);
+        InvokeRepeating("Spawn", departTime, intervalle);
     }
 
     void Spawn()

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Planet Orange.unity
     guid: 331ec710805d62e4aa0bd144b4caf547
+  - enabled: 1
+    path: Assets/Scenes/Planet.unity
+    guid: e14a0e58c01e87a4d812b7235f1e18d8
   m_configObjects: {}

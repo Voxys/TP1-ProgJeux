@@ -8,37 +8,28 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sprite;
     [SerializeField]
     public float speed;
-    private int compteur;
-
-    bool jump;
-
     public Animator animator;
+    public int compteur;
 
     void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         speed = 175f;
-        jump = true;
         compteur = 0;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && compteur < 2 || compteur == 1 && playerBody.velocity.y != 0)
+        if (Input.GetButtonDown("Jump") && playerBody.velocity.y == 0 || Input.GetButtonDown("Jump") && compteur == 1)
         {
-            jump = true;
             playerBody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
             animator.SetTrigger("Jump");
             compteur++;
-            Debug.Log("Update :" + compteur);
         }
 
-        if (compteur == 2)
-        {
+        if (compteur > 1)
             compteur = 0;
-        }
-
     }
 
     private void FixedUpdate()

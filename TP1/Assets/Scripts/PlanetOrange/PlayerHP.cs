@@ -7,27 +7,33 @@ using UnityEngine.SceneManagement;
 public class PlayerHP : MonoBehaviour
 {
     private int health = 5;
-    private bool isInvinsible;
+    private bool isInvincible;
+    private float isInvincibleTimer = 0;
 
     private void Start()
     {
-        isInvinsible = false;    
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
+        isInvincible = false;
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-
-        if(health <= 0)
+        if (isInvincible != true)
         {
-            Die();
+            health -= 1;
+            isInvincible = true;
         }
+
+        else if (isInvincibleTimer <= 0 && isInvincible == true)
+            isInvincible = false;
+
+
+        if (health <= 0)
+            Die();
+
+        if (isInvincible)
+             isInvincibleTimer -= 1 * Time.deltaTime;
+
+        Debug.Log(health);
     }
 
     private void Die()
