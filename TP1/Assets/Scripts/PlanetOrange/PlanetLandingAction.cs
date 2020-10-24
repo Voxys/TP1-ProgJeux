@@ -7,23 +7,24 @@ public class PlanetLandingAction : MonoBehaviour
     [SerializeField]
     GameObject UI, Player, Camera;
     bool exitShipRequested;
+    bool shipExited;
+
     private void Start()
     {
         UI.SetActive(false);
         Player.SetActive(false);
+        shipExited = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !shipExited)
         {
             Debug.Log("Input E");
             Camera.transform.parent = Player.transform;
             Player.SetActive(true);
             UI.SetActive(false);
-            this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
-            // -> Probléme de collision, je désactive donc le rigidbody du vaisseau jusqu'a la prochaine activation
-            
+            shipExited = true;
         }
     }
 

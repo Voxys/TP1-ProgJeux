@@ -7,12 +7,10 @@ public class MonsterMovement : MonoBehaviour
     public float speed;
     public int direction; // -1 : gauche | 1 : droite
     public GameObject player;
-    public int damage;
 
     private void Start()
     {
         speed = 1f;
-        damage = 1;
     }
 
     private void Update()
@@ -26,7 +24,7 @@ public class MonsterMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
             Debug.Log("collision");
-            player.GetComponent<PlayerHP>().TakeDamage(1);
+            player.GetComponent<PlayerHP>().TakeDamage();
         }
     }
 

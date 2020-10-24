@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   animator: {fileID: 3129581265696373932}
+  compteur: 0
 --- !u!95 &3129581265696373932
 Animator:
   serializedVersion: 3
@@ -179,3 +180,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25058a5d9db122448bfae6c1498f3712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthUI: {fileID: 6386627971441878161, guid: 3c9d62ac2428f4c45b9c4bf84c5c3aac, type: 3}

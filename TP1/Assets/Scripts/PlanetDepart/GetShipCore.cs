@@ -7,7 +7,7 @@ public class GetShipCore : MonoBehaviour
 {
     [SerializeField]
     GameObject UI;
-    static bool hasShipCore { get; set; }
+    bool hasShipCore { get; set; }
 
     private void Start()
     {

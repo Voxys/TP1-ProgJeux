@@ -10,6 +10,11 @@ public class SpaceShipControl : MonoBehaviour
 
     bool isActivated;
 
+    public void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     public void activateShip()
     {
         //Changer la caméra de parent
@@ -18,11 +23,6 @@ public class SpaceShipControl : MonoBehaviour
         isActivated = true;
     }
 
-    public void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-   
     public void Update()
     {
         if (Input.GetButtonDown("Jump") && isActivated)
