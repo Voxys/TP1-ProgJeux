@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 47662279}
   - component: {fileID: 47662280}
   - component: {fileID: 47662281}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Platform_Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,11 +215,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 47662278}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4f57eb7d25f19c7409350fd72fea6e85, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026856422, y: 0.19362998}
+  m_Offset: {x: -0.017724037, y: 0.19362998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -230,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3849354, y: 0.43417406}
+  m_Size: {x: 2.1363506, y: 0.43417406}
   m_EdgeRadius: 0
 --- !u!1 &53349216
 GameObject:
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 63341905}
   - component: {fileID: 63341906}
   - component: {fileID: 63341907}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Platform_Wood (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 63341904}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4f57eb7d25f19c7409350fd72fea6e85, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3996,7 +3996,7 @@ GameObject:
   - component: {fileID: 1442229775}
   - component: {fileID: 1442229776}
   - component: {fileID: 1442229777}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Platform_Wood_Wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4077,7 +4077,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1442229774}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4f57eb7d25f19c7409350fd72fea6e85, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5871,7 +5871,7 @@ GameObject:
   - component: {fileID: 2082748684}
   - component: {fileID: 2082748685}
   - component: {fileID: 2082748686}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Platform_Wood (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5952,7 +5952,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2082748683}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4f57eb7d25f19c7409350fd72fea6e85, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
