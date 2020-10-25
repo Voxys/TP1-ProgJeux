@@ -21,7 +21,7 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("collision");
             player.GetComponent<PlayerHP>().TakeDamage();

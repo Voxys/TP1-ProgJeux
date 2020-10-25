@@ -785,6 +785,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedFighter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 731a405b9e3ac204c9b1f101f5a32bf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0000014674
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 731a405b9e3ac204c9b1f101f5a32bf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8972
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 731a405b9e3ac204c9b1f101f5a32bf1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 731a405b9e3ac204c9b1f101f5a32bf1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.049483355
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731a405b9e3ac204c9b1f101f5a32bf1, type: 3}
 --- !u!1 &846992286 stripped

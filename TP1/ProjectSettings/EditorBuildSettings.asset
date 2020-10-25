@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Planet Red.unity
     guid: ad675cab70d616a43b09deaf7dcee45f
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 8c7aff9bd9bca374198ed41085c0dff1
+  - enabled: 1
+    path: Assets/Scenes/Retry.unity
+    guid: 0f546dc6285155e4490e34fa3b432942
   m_configObjects: {}

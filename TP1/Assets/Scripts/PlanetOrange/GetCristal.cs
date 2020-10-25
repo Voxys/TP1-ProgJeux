@@ -12,7 +12,6 @@ public class GetCristal : MonoBehaviour
         UI.SetActive(false);
         dialogueCristal.SetActive(false);
         compteur = 0;
-        Debug.Log("Start");
     }
 
     private void Update()
@@ -49,5 +48,10 @@ public class GetCristal : MonoBehaviour
 
         if(this.gameObject.GetComponent<Renderer>().enabled == false)
             this.gameObject.SetActive(false);
+    }
+
+    public int GetCompteur()
+    {
+        return compteur;
     }
 }

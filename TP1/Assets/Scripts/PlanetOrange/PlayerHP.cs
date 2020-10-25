@@ -57,7 +57,12 @@ public class PlayerHP : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene("Planet");
+        SceneManager.LoadScene("Retry");
+    }
+
+    public void SetHealthDefault()
+    {
+        health = 100;
     }
 
     public int GetHealth()
