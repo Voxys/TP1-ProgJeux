@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Planet Orange
+  - Planet Red
   layers:
   - Default
   - TransparentFX
